@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            border: 50px solid blue;
+            height: 100vh;
+        }
+
+        #f-2 {
+            margin-top: 100px;
+        }
+
+        #f-1 {
+            float: right;
+            color: aqua;
+            font-size: 100px;
+            margin-top: 100px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css" />
+</head>
+
+<body>
+    <header class="Header">
+        <nav class="Navbar">
+            <h1 class="Logo"><a href="./index.html">Explore India</a></h1>
+            <input style="height: 0px; width: 0px;" type="checkbox" id="Menu-toggle" />
+            <label for="Menu-toggle" id="Hamburger-btn"></label>
+            <ul class="Links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./3d.html">3D images</a></li>
+            </ul>
+            <div class="buttons">
+                <a href="./signin.html" class="Sign-in">Sign In</a>
+                <a href="./signup.html" class="Signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <h1>Here 3d images will be displayed</h1>
+    <div id="container">
+        <img src="./venkat.jpg" alt="" id="f-2">
+        <img src="./3d.jpg" alt="3D image of swamy" id="f-1">
+
+    </div>
+</body>
+
+</html>
