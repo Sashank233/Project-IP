@@ -7,10 +7,12 @@
   <title>Explore India</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./navbar.css">
+  <link rel="stylesheet" href="./ui.css"> <!-- New UI CSS file -->
 </head>
 
 <body>
   <header class="Header">
+    <!-- Navigation bar with UI design -->
     <nav class="Navbar">
       <h1 class="Logo"><a href="./index.html">Explore India</a></h1>
       <input style="height: 0px; width: 0px;" type="checkbox" id="Menu-toggle" />
@@ -21,15 +23,18 @@
         <li><a href="./service.html">Services</a></li>
         <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./3d.html">3D images</a></li>
       </ul>
       <div class="buttons">
         <a href="./signin.html" class="Sign-in">Sign In</a>
         <a href="./signup.html" class="Signup">Sign Up</a>
       </div>
     </nav>
+    
   </header>
 
   <div class="Wrapper">
+    <!-- Background video and text -->
     <video autoplay loop muted plays-inline class="back-video">
       <source src="video.mp4" type="video/mp4">
     </video>
@@ -39,8 +44,7 @@
     </div>
   </div>
 
-  <br><br><br>
-
+  <!-- Featured destinations with UI design -->
   <section class="featured-destinations">
     <h2 class="destinations-heading">Explore Our Featured Destination Temples</h2>
     <div class="featured-images">
@@ -50,6 +54,7 @@
     </div>
   </section>
 
+  <!-- Why Choose Us section with UI design -->
   <center>
     <h1 class="lg-title">WHY CHOOSE US?</h1>
   </center>
@@ -72,6 +77,7 @@
     </div>
   </div>
 
+  <!-- Services section with UI design -->
   <section id="services">
     <div class="container">
       <div class="title-wrap">
@@ -105,6 +111,7 @@
     </div>
   </section>
 
+  <!-- Booking section with UI design -->
   <div class="booking-section">
     <div class="booking-content">
       <div class="booking-image">
@@ -117,6 +124,9 @@
       </div>
     </div>
   </div>
+
+
+
 
   <script>
     function displayPopup(imageSrc) {

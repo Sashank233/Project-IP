@@ -1,131 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore India</title>
-    <link rel="stylesheet" href="./loader.css" />
-    <link rel="stylesheet" href="./navbar.css" />
-    <link rel="stylesheet" href="./blog.css" />
-  </head>
 
-  <body>
-    <header class="Header">
-      <nav class="Navbar">
-        <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
-        <input
-          style="height: 0px; width: 0px"
-          type="checkbox"
-          id="menu-toggle"
-        />
-        <ul class="Links">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./service.html">Services</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-        <div class="buttons">
-          <a href="./signin.html" class="signin">Sign In</a>
-          <a href="./signup.html" class="signup">Sign Up</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore India</title>
+  <link rel="stylesheet" href="./loader.css" />
+  <link rel="stylesheet" href="./navbar.css" />
+  <link rel="stylesheet" href="./blog.css" />
+</head>
+
+<body>
+  <header class="Header">
+    <nav class="Navbar">
+      <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
+      <input style="height: 0px; width: 0px" type="checkbox" id="menu-toggle" />
+      <ul class="Links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./3d.html">3D images</a></li>
+
+      </ul>
+      <div class="buttons">
+        <a href="./signin.html" class="signin">Sign In</a>
+        <a href="./signup.html" class="signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="blog-container">
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Exploring the Spiritual Marvel - Tirupathi Balaji Temple</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="./tirupathi.jpeg" alt="Tirupathi Balaji Temple Image" class="blog-image" id="blog-image" />
+          <div class="carousel-controls">
+            <button id="prevBtn" onclick="prevImage()">&#10094;</button>
+            <button id="nextBtn" onclick="nextImage()">&#10095;</button>
+          </div>
         </div>
-      </nav>
-    </header>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Discover the divine aura and intricate architecture of Tirupathi
+          Balaji Temple, a spiritual landmark in Andhra Pradesh, drawing
+          millions of devotees annually.
+        </p>
+        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
 
-    <section class="blog-container">
-      <article class="blog">
-        <div class="blog-content">
-          <h2>Exploring the Spiritual Marvel - Tirupathi Balaji Temple</h2>
-          <p class="blog-date">
-            <i class="fas fa-calendar-alt"></i>October 2, 2023
-          </p>
-          <p class="blog-author"><i class="fas fa-user"></i> Author: Sashank</p>
-          <img
-            src="tirupathi.jpeg"
-            alt="Tirupathi Balaji Temple Image"
-            class="blog-image"
-          />
-          <p class="blog-description" style="font-size: 25px">
-            Discover the divine aura and intricate architecture of Tirupathi
-            Balaji Temple, a spiritual landmark in Andhra Pradesh, drawing
-            millions of devotees annually.
-          </p>
-          <a href="index.html" class="read-more"
-            >Read More <i class="fas fa-arrow-right"></i
-          ></a>
+    <article class="blog">
+      <div class="blog-content">
+        <h2>A Tranquil Escape - Ramakrishna Beach, Visakhapatnam</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="ramakrishna-beach-image.jpg" alt="Ramakrishna Beach Image" class="blog-image" id="blog-image-2" />
+          <div class="carousel-controls">
+            <button id="prevBtn-2" onclick="prevImage2('2')">&#10094;</button>
+            <button id="nextBtn-2" onclick="nextImage2('2')">&#10095;</button>
+          </div>
         </div>
-      </article>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Immerse yourself in the serene beauty of Ramakrishna Beach in
+          Visakhapatnam, where golden sands meet the Bay of Bengal, offering a
+          perfect blend of tranquility and coastal charm.
+        </p>
+        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
 
-      <article class="blog">
-        <div class="blog-content">
-          <h2>A Tranquil Escape - Ramakrishna Beach, Visakhapatnam</h2>
-          <p class="blog-date">
-            <i class="fas fa-calendar-alt"></i> April 5, 2024
-          </p>
-          <p class="blog-author">
-            <i class="fas fa-user"></i> Author: Ragala Purushotham
-          </p>
-          <img
-            src="ramakrishna-beach-image.jpg"
-            alt="Ramakrishna Beach Image"
-            class="blog-image"
-          />
-          <p class="blog-description" style="font-size: 25px">
-            Immerse yourself in the serene beauty of Ramakrishna Beach in
-            Visakhapatnam, where golden sands meet the Bay of Bengal, offering a
-            perfect blend of tranquility and coastal charm.
-          </p>
-          <a href="index.html" class="read-more"
-            >Read More <i class="fas fa-arrow-right"></i
-          ></a>
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Journey into the Stars - Sri Harikota Rocket Space Centre</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="harikota.jpg" alt="Sri Harikota Rocket Space Centre Image" class="blog-image" id="blog-image-3" />
+          <div class="carousel-controls">
+            <button id="prevBtn-3" onclick="prevImage3('3')">&#10094;</button>
+            <button id="nextBtn-3" onclick="nextImage3('3')">&#10095;</button>
+          </div>
         </div>
-      </article>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Embark on a fascinating exploration of Sri Harikota Rocket Space
+          Centre, the hub of India's space endeavors, witnessing cutting-edge
+          technology and space missions.
+        </p>
+        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
 
-      <article class="blog">
-        <div class="blog-content">
-          <h2>Journey into the Stars - Sri Harikota Rocket Space Centre</h2>
-          <p class="blog-date">
-            <i class="fas fa-calendar-alt"></i>January 7, 2024
-          </p>
-          <p class="blog-author">
-            <i class="fas fa-user"></i> Author: Rohan Kumar
-          </p>
-          <img
-            src="harikota.jpg"
-            alt="Sri Harikota Rocket Space Centre Image"
-            class="blog-image"
-          />
-          <p class="blog-description" style="font-size: 25px">
-            Embark on a fascinating exploration of Sri Harikota Rocket Space
-            Centre, the hub of India's space endeavors, witnessing cutting-edge
-            technology and space missions.
-          </p>
-          <a href="index.html" class="read-more"
-            >Read More <i class="fas fa-arrow-right"></i
-          ></a>
+
+
+
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Nature's Paradise - Araku Valley, Visakhapatnam</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="araku.jpg" alt="Araku Valley Image" class="blog-image" id="blog-image-4" />
+          <div class="carousel-controls">
+            <button id="prevBtn-4" onclick="prevImage4()">&#10094;</button>
+            <button id="nextBtn-4" onclick="nextImage4()">&#10095;</button>
+          </div>
         </div>
-      </article>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Escape to the picturesque landscapes of Araku Valley in
+          Visakhapatnam, surrounded by lush greenery, coffee plantations, and
+          tribal culture, making it a perfect retreat for nature enthusiasts.
+        </p>
+        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
 
-      <article class="blog">
-        <div class="blog-content">
-          <h2>Nature's Paradise - Araku Valley, Visakhapatnam</h2>
-          <p class="blog-date">
-            <i class="fas fa-calendar-alt"></i>January 26, 2024
-          </p>
-          <p class="blog-author"><i class="fas fa-user"></i> Author: Maram Rohan Raj</p>
-          <img src="araku.jpg" alt="Araku Valley Image" class="blog-image" />
-          <p class="blog-description" style="font-size: 25px">
-            Escape to the picturesque landscapes of Araku Valley in
-            Visakhapatnam, surrounded by lush greenery, coffee plantations, and
-            tribal culture, making it a perfect retreat for nature enthusiasts.
-          </p>
-          <a href="index.html" class="read-more"
-            >Read More <i class="fas fa-arrow-right"></i
-          ></a>
+
+
+
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Discover the Serenity of Nelapattu Bird Sanctuary, Andhra Pradesh</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="./nelapattu-bird-sanctuary.jpg" alt="Nelapattu Bird Sanctuary Image" class="blog-image"
+            id="blog-image-5" />
+          <div class="carousel-controls">
+            <button id="prevBtn-5" onclick="prevImage5()">&#10094;</button>
+            <button id="nextBtn-5" onclick="nextImage5()">&#10095;</button>
+          </div>
         </div>
-      </article>
-    </section>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Immerse yourself in the tranquil beauty of Nelapattu Bird Sanctuary, nestled in the heart of Andhra Pradesh.
+          Hear the enchanting melodies of various bird species as you explore the serene wetlands and lush
+          greenery. A paradise for birdwatchers and nature lovers alike!
+        </p>
+        <a href="index.html" class="read-more">
+          Read More <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </article>
 
-    <script src="./loader.js"></script>
-  </body>
+  </section>
+
+
+
+
+
+
+
+
+  <script>
+    // JavaScript for the first blog article
+    let currentImageIndex = 0;
+    const images = ["tirupathi.jpeg", "tirupathi2.jpeg", "tirupathi3.jpeg"]; // Add more image URLs as needed
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      document.getElementById("blog-image").src = images[currentImageIndex];
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      document.getElementById("blog-image").src = images[currentImageIndex];
+    }
+  </script>
+
+  <script>
+    // JavaScript for the second blog article
+    let currentImageIndex2 = 0;
+    const images2 = ["ramakrishna-beach-image.jpg", "ramakrishna-beach-image2.jpg", "ramakrishna-beach-image3.jpg"]; // Add more image URLs as needed
+
+    function nextImage2() {
+      currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+      document.getElementById("blog-image-2").src = images2[currentImageIndex2];
+    }
+
+    function prevImage2() {
+      currentImageIndex2 = (currentImageIndex2 - 1 + images2.length) % images2.length;
+      document.getElementById("blog-image-2").src = images2[currentImageIndex2];
+    }
+  </script>
+
+  <script>
+    // JavaScript for the third blog article
+    let currentImageIndex3 = 0;
+    const images3 = ["harikota.jpg", "harikota2.jpg", "harikota3.jpg"]; // Add more image URLs as needed
+
+    function nextImage3() {
+      currentImageIndex3 = (currentImageIndex3 + 1) % images3.length;
+      document.getElementById("blog-image-3").src = images3[currentImageIndex3];
+    }
+
+    function prevImage3() {
+      currentImageIndex3 = (currentImageIndex3 - 1 + images3.length) % images3.length;
+      document.getElementById("blog-image-3").src = images3[currentImageIndex3];
+    }
+  </script>
+
+
+
+
+  <script>
+    let currentImageIndex4 = 0;
+    const images4 = ["araku.jpg", "araku2.jpg", "araku3.jpg"]; // Add more image URLs as needed
+
+    function nextImage4() {
+      currentImageIndex4 = (currentImageIndex4 + 1) % images4.length;
+      document.getElementById("blog-image-4").src = images4[currentImageIndex4];
+    }
+
+    function prevImage4() {
+      currentImageIndex4 = (currentImageIndex4 - 1 + images4.length) % images4.length;
+      document.getElementById("blog-image-4").src = images4[currentImageIndex4];
+    }
+  </script>
+
+
+
+
+  <script>
+    let currentImageIndex5 = 0;
+    const images5 = ["./nelapattu-bird-sanctuary.jpg", "./nelapattu-bird-sanctuary2.jpg", "./nelapattu-bird-sanctuary3.jpg"]; // Add more image URLs as needed
+
+    function nextImage5() {
+      currentImageIndex5 = (currentImageIndex5 + 1) % images5.length;
+      document.getElementById("blog-image-5").src = images5[currentImageIndex5];
+    }
+
+    function prevImage5() {
+      currentImageIndex5 = (currentImageIndex5 - 1 + images5.length) % images5.length;
+      document.getElementById("blog-image-5").src = images5[currentImageIndex5];
+    }
+  </script>
+
+
+
+
+  <script src="./loader.js"></script>
+</body>
+
 </html>
