@@ -8,7 +8,7 @@
 
 /* Navigation bar styling */
 .Navbar {
-    animation: changeColor 10s infinite;
+    animation: changeColor 20s infinite;
     /* Apply the animation */
 }
 
