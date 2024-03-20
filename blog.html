@@ -50,7 +50,6 @@
           Balaji Temple, a spiritual landmark in Andhra Pradesh, drawing
           millions of devotees annually.
         </p>
-        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -71,7 +70,6 @@
           Visakhapatnam, where golden sands meet the Bay of Bengal, offering a
           perfect blend of tranquility and coastal charm.
         </p>
-        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -92,7 +90,6 @@
           Centre, the hub of India's space endeavors, witnessing cutting-edge
           technology and space missions.
         </p>
-        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -117,7 +114,6 @@
           Visakhapatnam, surrounded by lush greenery, coffee plantations, and
           tribal culture, making it a perfect retreat for nature enthusiasts.
         </p>
-        <a href="index.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -143,11 +139,89 @@
           Hear the enchanting melodies of various bird species as you explore the serene wetlands and lush
           greenery. A paradise for birdwatchers and nature lovers alike!
         </p>
-        <a href="index.html" class="read-more">
-          Read More <i class="fas fa-arrow-right"></i>
-        </a>
       </div>
     </article>
+
+
+
+    <article class="blog">
+  <div class="blog-content">
+    <h2>Explore the Rich History of Nalanda University, Bihar</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./nalanda-university.jpg" alt="Nalanda University Image" class="blog-image" id="blog-image-6" />
+      <div class="carousel-controls">
+        <button id="prevBtn-6" onclick="prevImage6()">&#10094;</button>
+        <button id="nextBtn-6" onclick="nextImage6()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Journey through time and uncover the ancient grandeur of Nalanda University, situated in the historic expanse of Bihar. Immerse yourself in the scholarly ambiance that once animated this illustrious hub of education. Embark on a quest to explore the remnants and artifacts that echo tales of a bygone epoch, providing glimpses into the intellectual legacy of India.
+    </p>
+  </div>
+</article>
+
+
+
+
+
+<article class="blog">
+  <div class="blog-content">
+    <h2>Discover the Rajgir Glass Bridge, Bihar</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./glass-bridge.jpg" alt="Rajgir Glass Bridge Image" class="blog-image" id="blog-image-7" />
+      <div class="carousel-controls">
+        <button id="prevBtn-7" onclick="prevImage7()">&#10094;</button>
+        <button id="nextBtn-7" onclick="nextImage7()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Embark on an adventure and experience the breathtaking Rajgir Glass Bridge in Bihar. Traverse this architectural marvel that offers panoramic views of the lush landscapes below. Feel the thrill as you walk on the transparent pathway suspended high above the ground. A must-visit destination for thrill-seekers and nature enthusiasts alike!
+    </p>
+  </div>
+</article>
+
+
+
+<article class="blog">
+  <div class="blog-content">
+    <h2>Explore the Spiritual Essence of Varanasi, Uttar Pradesh</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./varanasi-image.jpg" alt="Varanasi Image" class="blog-image" id="blog-image-8" />
+      <div class="carousel-controls">
+        <button id="prevBtn-8" onclick="prevImage8()">&#10094;</button>
+        <button id="nextBtn-8" onclick="nextImage8()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Immerse yourself in the spiritual ambiance of Varanasi, Uttar Pradesh. Wander through the labyrinthine alleys that echo with ancient chants and hymns. Witness the mesmerizing Ganga Aarti ceremony along the sacred banks of the Ganges River. Explore the vibrant ghats and temples that stand as testament to the city's rich cultural heritage. A mystical journey awaits in the oldest continuously inhabited city in the world.
+    </p>
+  </div>
+</article>
+
+
+<article class="blog">
+  <div class="blog-content">
+    <h2>Discover the Spiritual Vibes of Jagannath Puri, Odisha</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./puri.jpeg" alt="Jagannath Puri Image" class="blog-image" id="blog-image-9" />
+      <div class="carousel-controls">
+        <button id="prevBtn-9" onclick="prevImage9()">&#10094;</button>
+        <button id="nextBtn-9" onclick="nextImage9()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Immerse yourself in the divine aura of Jagannath Puri, Odisha. Explore the sacred temples dedicated to Lord Jagannath, Balabhadra, and Subhadra. Witness the elaborate rituals and colorful festivities that adorn the city throughout the year. Stroll along the pristine beaches and feel the tranquility wash over you. Embark on a spiritual journey to one of India's holiest cities and experience the essence of devotion and piety.
+    </p>
+  </div>
+</article>
 
   </section>
 
@@ -241,6 +315,72 @@
       document.getElementById("blog-image-5").src = images5[currentImageIndex5];
     }
   </script>
+
+
+
+<script>
+    let currentImageIndex6 = 0;
+    const images6 = ["./nalanda-university.jpg", "./nalanda-university 2.jpg", "./nalanda-university 3.jpg"]; // Add more image URLs as needed
+
+    function nextImage6() {
+      currentImageIndex6 = (currentImageIndex6 + 1) % images6.length;
+      document.getElementById("blog-image-6").src = images6[currentImageIndex6];
+    }
+
+    function prevImage6() {
+      currentImageIndex6 = (currentImageIndex6 - 1 + images6.length) % images6.length;
+      document.getElementById("blog-image-6").src = images6[currentImageIndex6];
+    }
+</script>
+
+
+
+<script>
+    let currentImageIndex7 = 0;
+    const images7 = ["./glass-bridge.jpg", "./glass-bridge1.jpg", "./glass-bridge2.jpg"]; // Add more image URLs as needed
+
+    function nextImage7() {
+      currentImageIndex7 = (currentImageIndex7 + 1) % images7.length;
+      document.getElementById("blog-image-7").src = images7[currentImageIndex7];
+    }
+
+    function prevImage7() {
+      currentImageIndex7 = (currentImageIndex7 - 1 + images7.length) % images7.length;
+      document.getElementById("blog-image-7").src = images7[currentImageIndex7];
+    }
+</script>
+
+
+<script>
+    let currentImageIndex8 = 0;
+    const images8 = ["./varanasi-image.jpg", "./varanasi2.jpg", "./varanasi3.jpg"]; // Add more image URLs as needed
+
+    function nextImage8() {
+      currentImageIndex8 = (currentImageIndex8 + 1) % images8.length;
+      document.getElementById("blog-image-8").src = images8[currentImageIndex8];
+    }
+
+    function prevImage8() {
+      currentImageIndex8 = (currentImageIndex8 - 1 + images8.length) % images8.length;
+      document.getElementById("blog-image-8").src = images8[currentImageIndex8];
+    }
+</script>
+
+
+<script>
+    let currentImageIndex9 = 0;
+    const images9 = ["./puri.jpeg", "./puri2.jpg", "./puri3.jpg"]; // Add more image URLs as needed
+
+    function nextImage9() {
+      currentImageIndex9 = (currentImageIndex9 + 1) % images9.length;
+      document.getElementById("blog-image-9").src = images9[currentImageIndex9];
+    }
+
+    function prevImage9() {
+      currentImageIndex9 = (currentImageIndex9 - 1 + images9.length) % images9.length;
+      document.getElementById("blog-image-9").src = images9[currentImageIndex9];
+    }
+</script>
 
 
 
