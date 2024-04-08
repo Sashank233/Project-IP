@@ -11,20 +11,35 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./navbar.css" />
     <link rel="stylesheet" href="./ui.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- New UI CSS file -->
   </head>
-
+  <style>
+    #Hamburger-btn button:nth-child(1) {
+      display: inline-block;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #Hamburger-btn button:nth-child(2) {
+      display: none;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
   <body>
     <header class="Header">
       <!-- Navigation bar with UI design -->
       <nav class="Navbar">
         <h1 class="Logo"><a href="./index.html">Explore India</a></h1>
-        <input
-          style="height: 0px; width: 0px"
-          type="checkbox"
-          id="Menu-toggle"
-        />
-        <label for="Menu-toggle" id="Hamburger-btn"></label>
+
+        <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
         <ul class="Links">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About Us</a></li>
@@ -192,6 +207,29 @@
     </div>
 
     <!-- Script section -->
+
+
+    <!-- script for responsive nav -->
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btnEquals = document.querySelector('#Hamburger-btn button:nth-child(1)');
+        var btnPlus = document.querySelector('#Hamburger-btn button:nth-child(2)');
+        var links = document.querySelector('.Links')
+        btnEquals.addEventListener('click', function() {
+          btnEquals.style.display = 'none';
+          btnPlus.style.display = 'inline-block';
+          links.style.left="0"
+        });
+    
+        btnPlus.addEventListener('click', function() {
+          btnPlus.style.display = 'none';
+          btnEquals.style.display = 'inline-block';
+          links.style.left = "-100%";
+        });
+      });
+    </script>
+
     <script>
       function displayPopup(imageSrc) {
         const popup = document.getElementById("popup");
@@ -215,7 +253,7 @@
             const y = e.clientY / window.innerHeight;
             const shadowX = (x - 0.5) * 50;
             const shadowY = (y - 0.5) * 50;
-            movingText.style.textShadow = `${shadowX}px ${shadowY}px 5px black`;
+            movingText.style.textShadow = ${shadowX}px ${shadowY}px 5px black;
           });
         } else {
           console.error("Element with id 'moving-text' not found.");

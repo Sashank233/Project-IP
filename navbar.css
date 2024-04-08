@@ -73,12 +73,16 @@
     display: none;
 }
 
-
+#Hamburger-btn{
+  display: none;
+}
 @media screen and (max-width: 923px) {
     .Navbar .Logo a {
       font-size: 1.5rem;
     }
-  
+    #Hamburger-btn{
+      display: block;
+    }
     .Links {
       position: fixed;
       left: -100%;
@@ -89,14 +93,6 @@
       background: #175d69;
       flex-direction: column;
       transition: 0.3s ease;
-    }
-  
-    .Navbar #menu-toggle:checked~.Links {
-      left: 0;
-    }
-  
-    .Navbar #hamburger-btn {
-      display: block;
     }
   
     .Header .buttons {
