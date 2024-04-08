@@ -14,23 +14,7 @@
 
 <body>
   <header class="Header">
-    <nav class="Navbar">
-      <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
-      <input style="height: 0px; width: 0px;" type="checkbox" id="menu-toggle" />
-      <ul class="Links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./service.html">Services</a></li>
-        <li><a href="./blog.html">Blog</a></li>
-        <li><a href="./contact.html">Contact Us</a></li>
-        <li><a href="./3d.html">3D images</a></li>
-
-      </ul>
-      <div class="buttons">
-        <a href="./signin.html" class="signin">Sign In</a>
-        <a href="./signup.html" class="signup">Sign Up</a>
-      </div>
-    </nav>
+<h1>Wecome to our Travel wesite</h1>
   </header>
 
   <div class="sign-container">
@@ -45,12 +29,23 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
 
-      <button type="submit">Sign Up</button>
+      <button id="submit">Sign Up</button>
+      <a href="signin.html">signin</a>
     </form>
   </div>
 
   <!-- Additional content or scripts if needed -->
 
 </body>
-
+<script>
+  document.getElementById('submit').addEventListener('click',async(e)=>{
+    e.preventDefault()
+      let value1=document.getElementById('fullname').value.trim();
+      let value2=document.getElementById('email').value.trim();
+      let value3=document.getElementById('password').value.trim();
+      let result =await fetch(`http://localhost:1010/getData?fullname=${value1}&email=${value2}&password=${value3}`);
+     let data=await result.text();
+     console.log(data);
+  })
+</script>
 </html>
