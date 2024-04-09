@@ -253,7 +253,7 @@
             const y = e.clientY / window.innerHeight;
             const shadowX = (x - 0.5) * 50;
             const shadowY = (y - 0.5) * 50;
-            movingText.style.textShadow = ${shadowX}px ${shadowY}px 5px black;
+            movingText.style.textShadow = `${shadowX}px ${shadowY}px 5px black`;
           });
         } else {
           console.error("Element with id 'moving-text' not found.");
