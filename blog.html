@@ -11,11 +11,32 @@
   <link rel="stylesheet" href="./ui.css" />
 </head>
 
+<style>
+    #Hamburger-btn button:nth-child(1) {
+      display: inline-block;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #Hamburger-btn button:nth-child(2) {
+      display: none;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
 <body>
   <header class="Header">
     <nav class="Navbar">
       <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
       <input style="height: 0px; width: 0px" type="checkbox" id="menu-toggle" />
+      <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
       <ul class="Links">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About Us</a></li>
@@ -233,6 +254,25 @@
   </section>
 
 
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btnEquals = document.querySelector('#Hamburger-btn button:nth-child(1)');
+        var btnPlus = document.querySelector('#Hamburger-btn button:nth-child(2)');
+        var links = document.querySelector('.Links')
+        btnEquals.addEventListener('click', function() {
+          btnEquals.style.display = 'none';
+          btnPlus.style.display = 'inline-block';
+          links.style.left="0"
+        });
+    
+        btnPlus.addEventListener('click', function() {
+          btnPlus.style.display = 'none';
+          btnEquals.style.display = 'inline-block';
+          links.style.left = "-100%";
+        });
+      });
+    </script>
 
 
 
