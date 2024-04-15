@@ -12,14 +12,11 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: #f8f9fa;
-  /* Light gray background */
 }
 
 .Header {
   background-color: #343a40;
-  /* Dark Navbar background */
   color: #ffffff;
-  /* Navbar text color */
   padding: 15px 0;
 }
 
@@ -101,9 +98,7 @@ body {
 
 .buttons a:hover {
   background-color: #ffffff;
-  /* Button hover background color */
   color: #343a40;
-  /* Button hover text color */
 }
 
 .Wrapper {
@@ -136,8 +131,6 @@ body {
 .div-top {
   width: 100%;
   height: 100vh;
-  background-image: url('./background-image.jpg');
-  /* Replace with your background image */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -147,7 +140,6 @@ body {
 
 #element {
   color: #4da819;
-  /* Vibrant green */
 }
 
 .div-top-text {
@@ -169,7 +161,6 @@ body {
   font-size: 32px;
   font-weight: bold;
   color: #343a40;
-  /* Dark gray text color */
 }
 
 .featured-images {
