@@ -49,5 +49,6 @@
     "fullname": "Rohan Kumar",
     "email": "rohankumar2663@gmail.com",
     "password": "1234"
-  }
+  },
+  { "fullname": "abc", "email": "abc@gmail.com", "password": "1234" }
 ]
