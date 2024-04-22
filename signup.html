@@ -47,6 +47,7 @@
       let result =await fetch(`http://localhost:1010/getData?fullname=${value1}&email=${value2}&password=${value3}`);
      let data=await result.text();
      console.log(data);
+     window.location.href = "signin.html";
   })
 </script>
 </html>
