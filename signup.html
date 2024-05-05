@@ -28,6 +28,7 @@
                 <li><a href="./service.html">Services</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./booking.html">Hotel Booking</a></li>
                 <li><a href="./3d.html">3D images</a></li>
             </ul>
         </nav>
@@ -57,7 +58,28 @@
   <!-- Additional content or scripts if needed -->
 
 </body>
-<script>
+
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btnEquals = document.querySelector('#Hamburger-btn button:nth-child(1)');
+        var btnPlus = document.querySelector('#Hamburger-btn button:nth-child(2)');
+        var links = document.querySelector('.Links')
+        btnEquals.addEventListener('click', function() {
+          btnEquals.style.display = 'none';
+          btnPlus.style.display = 'inline-block';
+          links.style.left="0"
+        });
+    
+        btnPlus.addEventListener('click', function() {
+          btnPlus.style.display = 'none';
+          btnEquals.style.display = 'inline-block';
+          links.style.left = "-100%";
+        });
+      });
+    </script>
+
+    <script>
   document.getElementById('submit').addEventListener('click',async(e)=>{
     e.preventDefault()
       let value1=document.getElementById('fullname').value.trim();
@@ -69,4 +91,5 @@
      window.location.href = "signin.html";
   })
 </script>
+
 </html>

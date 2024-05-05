@@ -53,4 +53,8 @@ body {
   .sign-form button:hover {
     background-color: #218838;
   }
+
+  button:nth-child(2){
+    display: none;
+  }
   
