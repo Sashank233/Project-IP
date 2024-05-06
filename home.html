@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Welcome to the additional tourism places</h1>
+    <div id="container"></div>
+    <script>
+        fetch('/getPosts').then(response => response.json())
+            .then(posts => {
+                const container = document.getElementById('container');
+                posts.forEach(post => {
+                    const div = document.createElement('div');
+                    let h2 = document.createElement('h2');
+                    let p = document.createElement('p');
+                    let img = document.createElement('img');
+                    h2.innerHTML = post.title;
+                    p.innerHTML = post.desc;
+                    img.src = post.image_url;
+                    img.alt = post.title;
+                    img.style = 'width: 300px';
+                    img.onclick = function() {
+                        displayPost(div);
+                    };
+                    div.append(h2, p, img);
+                    div.style = 'border: 2px solid black; margin-right: 4px; border-radius: 10px; padding: 7px';
+                    container.appendChild(div);
+                });
+            });
+
+            function displayPost(clickedPost) {
+                const allPosts = container.querySelectorAll('div');
+                allPosts.forEach(post => {
+                    if (post != clickedPost) {
+                        post.style.display = 'none';
+                    }
+                });
+            }            
+    </script>
+</body>
+
+</html>

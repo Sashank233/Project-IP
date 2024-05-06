@@ -112,6 +112,100 @@ app.get("/change", (req, res) => {
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! for multer
+const multer = require('multer');
+const abc = multer.diskStorage({
+    destination: './upload',
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
+const upload = multer({
+    storage: abc,
+});
+let arr = [];
+
+
+
+
+
+app.get('/addpost',  (req, res) => {
+    res.sendFile('./addpost.html', { root: './' });
+})
+
+
+
+
+app.get('/favicon.ico', (req, res) => {
+    res.writeHead(204);
+    res.end();
+})
+
+let uniqueid;
+
+app.post('/fileUpload', upload.single('image'), (req, res) => {
+    console.log(req.file);
+    if (!req.file) {
+      return res.status(400).send('No file uploaded.');
+  }
+
+    let data = req.body;
+    uniqueid = JSON.parse(fs.readFileSync('./pid.json', 'utf-8'));
+    uniqueid.pid++;
+    fs.writeFileSync('./pid.json', JSON.stringify(uniqueid));
+    let obj = {
+        "pid": uniqueid.pid,
+        "title": data.title,
+        "desc": data.desc,
+        "Date": new Date().toLocaleString(),
+        "image_url": req.file.destination + '/' + req.file.filename
+    }
+    console.log(data);
+    arr = JSON.parse(fs.readFileSync('./article.json', 'utf-8'));
+
+    arr.push(obj);
+    fs.writeFileSync('./article.json', JSON.stringify(arr));
+    res.redirect('/home')
+})
+
+app.get('/getPosts', (req, res) => {
+    const posts = JSON.parse(fs.readFileSync('./article.json', 'utf-8'));
+    res.json(posts);
+});
+
+
+
+app.get('/postTable', (req, res) => {
+    const post = JSON.parse(fs.readFileSync('./article.json', 'utf-8'));
+    res.json(post);
+})
+
+app.get('/dashboard', (req, res) => {
+    res.sendFile('./dashboard.html', { root: './' })
+})
+
+
+app.get('/home', (req, res) => {
+    res.sendFile('./home.html', { root: './' })
+})
+
+
+
+
 app.use((req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.status(404).send("<h1>404 not found</h1>");
