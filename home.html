@@ -25,7 +25,14 @@
                     p.innerHTML = post.desc;
                     img.src = post.image_url;
                     img.alt = post.title;
-                    img.style = 'width: 300px';
+                    img.style.width = '30vw'; // 30% of the viewport width
+img.style.height = 'auto'; // maintain aspect ratio
+
+// Adjust for large images
+if (img.naturalWidth > 800 || img.naturalHeight > 600) {
+  img.style.maxWidth = '800px'; // limit the width to 800px
+  img.style.maxHeight = '600px'; // limit the height to 600px
+}
                     img.onclick = function() {
                         displayPost(div);
                     };
