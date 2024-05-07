@@ -2,15 +2,64 @@
 <html lang="en">
 <head>
     <style>
-        #container {
-            display: flex;
-            align-items: center;
-        }
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add spacing between the title and content */
+}
+
+p {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    line-height: 1.5; /* Improve readability by adjusting line height */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #f0f0f0; /* Light gray background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+p:hover {
+    transform: translateY(-5px); /* Move description up slightly on hover */
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: center; /* Center align the items horizontally */
+}
+
+
+div{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+
+
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure images don't exceed container width */
+    max-height: 300px; /* Limit image height to maintain aspect ratio */
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+img:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    border: 2px solid black;
+}
+
+
     </style>
 </head>
 
 <body>
-    <h1 style="text-align: center;">Welcome to the additional tourism places</h1>
+    <h1 style="text-align: center; color:red; ">Welcome to the additional tourism places</h1>
+    <p>Here you can see the best tourism places in which the most of the people find helpful</p>
     <div id="container"></div>
     <script>
         fetch('/getPosts').then(response => response.json())
