@@ -21,28 +21,17 @@ app.get("/signin.html", (req, res) => {
   res.end(data);
 });
 
+let array = [];
+
 app.get("/getData", (req, res) => {
   let x = req.query;
-  let array = [];
-  let data = fs.readFileSync("./login.json", "utf-8");
-  array = JSON.parse(data);
-
-  // Check if user already exists
-  let userExists = array.some((item) => item.username === x.username);
-
-  if (userExists) {
-    console.log("User already exists");
-    res.setHeader("Content-Type", "text/html");
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.end(json.stringify({ exits: already }));
-  } else {
+  array = JSON.parse(  fs.readFileSync("./login.json", "utf-8") );
     array.push(x);
     fs.writeFileSync("./login.json", JSON.stringify(array));
     console.log("Data received successfully");
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.end("Data received successfully");
-  }
+    res.end("<h1>Data received successfully</h1>");
 });
 
 app.get("/xyz", (req, res) => {

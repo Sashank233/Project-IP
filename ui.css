@@ -8,23 +8,23 @@
 
 /* Navigation bar styling */
 .Navbar {
-    animation: changeColor 20s infinite;
+    animation: changeColor 10s infinite;
     /* Apply the animation */
 }
 
 @keyframes changeColor {
     0% {
-        background-color: #a2cfe8;
+        background-color: blue;
     }
 
     /* Initial background color */
     25% {
-        background-color: #e9db8e;
+        background-color: orange;
     }
 
     /* Color at 0.25s */
     50% {
-        background-color: #499f49;
+        background-color: green;
     }
 
     /* Color at 0.5s */
