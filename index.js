@@ -6,6 +6,11 @@ const { json } = require('stream/consumers');
 const ejs = require("ejs");
 
 const app = express();
+app.use(express.urlencoded({extended:true}))
+app.use(express.json());
+app.use(express.static("./"));
+
+
 app.set('view-engine','ejs');
 app.listen(1010,()=>{
     console.log("server started 1010");
@@ -13,8 +18,7 @@ app.listen(1010,()=>{
     console.log("server uunable to start 3001");
 })
 // Middleware to parse JSON bodies
-app.use(express.json());
-app.use(express.static("./"));
+
 app.get('/index.html', (req, res) => {
     res.setHeader("Content-Type", "text/html");
     let data = fs.readFileSync("./index.html");
@@ -28,14 +32,14 @@ app.get('/signin.html', (req, res) => {
 });
 
 
-app.get('/getData', (req, res) => {
-    let { fullname, email, password } = req.query;
-    let array = [];
-    let data = fs.readFileSync('./login.json', 'utf-8');
-    array = JSON.parse(data);
+let array = [];
 
+app.post('/getData', (req, res) => {
+    let obj = req.body;
+     array = JSON.parse(fs.readFileSync('./login.json', 'utf-8'));
+    
     // Check if user already exists
-    let userExists = array.some(item => item.fullname === fullname && item.email === email);
+    let userExists = array.find(item => item.fullname === req.body.fullname && item.email === req.body.email);
 
     if (userExists) {
         console.log("User already exists");
@@ -43,7 +47,7 @@ app.get('/getData', (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.end(JSON.stringify({ exists: true }));
     } else {
-        array.push({ fullname, email, password });
+        array.push(obj);
         fs.writeFileSync('./login.json', JSON.stringify(array));
         console.log("Data received successfully");
         res.setHeader("Content-Type", "application/json");
@@ -53,10 +57,10 @@ app.get('/getData', (req, res) => {
 });
 
 
-app.get('/xyz', (req, res) => {
+app.post('/xyz', (req, res) => {
     let arrayofObj = JSON.parse(fs.readFileSync('./login.json', 'utf-8'));
-    let username = req.query.username;
-    let password = req.query.password;
+    let username = req.body.username;
+    let password = req.body.password;
     let user = arrayofObj.find(obj => obj.fullname === username && obj.password === password);
     
     if (user) {

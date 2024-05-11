@@ -36,7 +36,7 @@
     </header>
 
     <div class="sign-container">
-      <form class="sign-form" action="http://localhost:1010/getData" method="post">
+      <form class="sign-form" action="/getData" method="post">
           <h2>Sign Up</h2>
           <label for="fullname">Full Name:</label>
           <input type="text" id="fullname" name="fullname" placeholder="Name" required>
@@ -59,21 +59,6 @@
   <!-- Additional content or scripts if needed -->
   
   <script>
-      document.getElementById('submit').addEventListener('click', async (e) => {
-          e.preventDefault(); // Prevent form submission
-          let value1 = document.getElementById('fullname').value.trim();
-          let value2 = document.getElementById('email').value.trim();
-          let value3 = document.getElementById('password').value.trim();
-          let response = await fetch('http://localhost:1010/getData', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({ fullname: value1, email: value2, password: value3 })
-          });
-          let data = await response.text();
-          console.log(data);
-          window.location.href = "signin.html";
-      });
+    
   </script>
   
