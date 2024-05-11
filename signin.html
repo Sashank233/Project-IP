@@ -85,7 +85,7 @@
     </header>
 
     <div class="sign-container">
-        <form class="sign-form">
+        <form  class="sign-form"  action="/xyz" method="post">
             <h2>Sign In</h2>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Username" required>
@@ -104,18 +104,24 @@
 
     <script>
       document.getElementById('submit').addEventListener('click', async (e) => {
-          e.preventDefault(); // Prevent form submission
-          let value1 = document.getElementById('username').value.trim(); // Corrected ID
-          let value2 = document.getElementById('password').value.trim(); // Corrected ID
-          let result = await fetch(`http://localhost:1010/xyz?username=${value1}&password=${value2}`);
-          let data = await result.json();
-          console.log(data); 
-          if (data.message === "login successful") {
-              window.location.href = '/index.html';
-          } else {
-              alert("Login failed. Please try again.");
-          }
-      });
+        e.preventDefault(); // Prevent form submission
+        let value1 = document.getElementById('username').value.trim();
+        let value2 = document.getElementById('password').value.trim();
+        let response = await fetch('http://localhost:1010/xyz', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username: value1, password: value2 })
+        });
+        let data = await response.json();
+        console.log(data); 
+        if (data.message === "login successful") {
+            window.location.href = '/index.html';
+        } else {
+            alert("Login failed. Please try again.");
+        }
+    });    
   </script>  
 </body>
 </html>

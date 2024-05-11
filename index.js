@@ -34,14 +34,11 @@ app.get("/getData", (req, res) => {
     res.end("<h1>Data received successfully</h1>");
 });
 
-app.get("/xyz", (req, res) => {
+app.post("/xyz", (req, res) => {
   let arrayofObj = JSON.parse(fs.readFileSync("./login.json", "utf-8"));
   let c = 0;
   arrayofObj.forEach((obj) => {
-    if (
-      obj.fullname == req.query.username &&
-      obj.password == req.query.password
-    ) {
+    if (obj.fullname == req.body.username && obj.password == req.body.password) {
       c = 1;
       res.setHeader("Content-Type", "application/json");
       res.setHeader("Access-Control-Allow-Origin", "*");
@@ -54,6 +51,7 @@ app.get("/xyz", (req, res) => {
     res.end(JSON.stringify({ message: "login not successful" }));
   }
 });
+
 
 app.get("/forget", (req, res) => {
   let arrayofObj = JSON.parse(fs.readFileSync("./login.json", "utf-8"));
