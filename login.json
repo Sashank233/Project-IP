@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 [
-<<<<<<< HEAD
+
   {
     "fullname": "puru",
     "email": "ragala1284.be22@chitkarauniversity.edu.in",
@@ -17,9 +17,9 @@
     "password": "puru"
   },
   { "fullname": "abc", "email": "some@gmail.com", "password": "abc" },
-  { "fullname": "india", "email": "p25361507@gmail.com", "password": "india" }
-]
-=======
+  { "fullname": "india", "email": "p25361507@gmail.com", "password": "india" },
+
+
 {"fullname":"puru","email":"ragala1284.be22@chitkarauniversity.edu.in","password":"123"},
 {"fullname":"puru","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"hi"},
 {"fullname":"rohan","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"123"},
@@ -27,7 +27,4 @@
 {"fullname":"puru","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"hi"},
 {"fullname":"puru","email":"rpurushotham0143@gmail.com","password":"puru"}
 ]
->>>>>>> e10b6629ebdad3cc5d34b049a5200e73c66fba4a
-=======
-[{"fullname":"puru","email":"ragala1284.be22@chitkarauniversity.edu.in","password":"123"},{"fullname":"puru","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"hi"},{"fullname":"rohan","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"123"},{"fullname":"puru","email":"ragala1284.be22@chitkarauniversity.edu.in","password":"123"},{"fullname":"puru","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"hi"},{"fullname":"puru","email":"rpurushotham0143@gmail.com","password":"puru"},{"fullname":"rohan","email":"rohan1315.be22@chitkarauniversity.edu.in","password":"Rohan"}]
->>>>>>> a5846741481b902cd7e43349ad13534603c2c307
+
