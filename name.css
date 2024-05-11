@@ -1,0 +1,15 @@
+#user-box {
+    width: 150px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    background-color: #18c23a; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 7px; /* Rounded corners */
+    padding: 7px; /* Padding */
+    text-align: center; /* Center text */
+    line-height: 50px; /* Vertical centering */
+}
+
+#user-box:hover {
+    background-color: red; /* Hover background color */
+    cursor: pointer; /* Change cursor on hover */
+}
