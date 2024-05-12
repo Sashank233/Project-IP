@@ -50,9 +50,9 @@ app.post('/getData', (req, res) => {
         array.push(obj);
         fs.writeFileSync('./login.json', JSON.stringify(array));
         console.log("Data received successfully");
-        res.setHeader("Content-Type", "application/json");
+        res.setHeader("Content-Type", "text/html");
         res.setHeader('Access-Control-Allow-Origin', '*');
-        res.end(JSON.stringify({ exists: false }));
+        res.end('<h1>sign up success</h1>');
     }
 });
 
